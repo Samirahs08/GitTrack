@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitTrack</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f1117;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #181b24;
+            padding: 50px;
+            border-radius: 20px;
+            width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #aeb4c0;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 10px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+        }
+
+        #status {
+            margin-top: 20px;
+            color: #aeb4c0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚀 GitTrack</h1>
+
+        <p>
+            Track new GitHub activity from the people you follow.
+        </p>
+
+        <button onclick="fetchUpdates()">
+            🔄 Fetch Updates
+        </button>
+
+        <div id="status"></div>
+
+    </div>
+
+    <script>
+
+        function fetchUpdates() {
+
+            const status = document.getElementById("status");
+
+            status.innerText = "⏳ Checking GitHub...";
+
+            const webhookURL = "https://samirahs08.app.n8n.cloud/webhook/18c4bbac-e5a1-41bb-89e0-62aeac31145b";
+
+            window.location.href = webhookURL;
+        }
+
+    </script>
+
+</body>
+</html>
